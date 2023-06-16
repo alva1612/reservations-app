@@ -11,6 +11,15 @@ export enum WEEK_DAYS {
   FRI = "Viernes",
   SAT = "Sábado",
 }
+export enum WEEK_DAYS_LOCAL {
+  MON = "Lunes",
+  TUE = "Martes",
+  WED = "Miércoles",
+  THU = "Jueves",
+  FRI = "Viernes",
+  SAT = "Sábado",
+  SUN = "Domingo",
+}
 
 const MONTH_NAMES = {
   JAN: "Enero",
