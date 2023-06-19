@@ -8,6 +8,7 @@ export default defineConfig({
 
   resolve: {
     alias: {
+      "@lib": resolve(__dirname, "./src/lib"),
       "@calendar": resolve(__dirname, "./src/modules/calendar"),
     },
   },

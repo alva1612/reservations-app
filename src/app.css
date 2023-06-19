@@ -1,6 +1,8 @@
 :root {
   --bg-color: rgba(10, 10, 10, 0.9);
-  --text-color: #DCDCD4;
+  --text-color: #dcdcd4;
+
+  font-size: 16px;
 }
 
 body {

@@ -1,6 +1,4 @@
-const MINUTE_MS = 1000 * 60
-const HOUR_MS = 60 * MINUTE_MS
-const DAY_MS = HOUR_MS * 24
+import { DAY_MS } from "@lib/constants/time.constant"
 
 //gets the day number that starts the week from a given date
 export const getStartOfWeek = (date: Date): Date => {
