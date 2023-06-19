@@ -1,4 +1,3 @@
-
 interface CalendarSettings {
   interval: "day" | "week" | "month"
 }
@@ -13,7 +12,7 @@ export enum WEEK_DAYS {
   SAT = "Sábado",
 }
 
-export const weekDaysArr = Object.values(WEEK_DAYS) 
+export const weekDaysArr = Object.values(WEEK_DAYS)
 
 export enum WEEK_DAYS_LOCAL {
   MON = "Lunes",
@@ -31,7 +30,7 @@ const MONTH_NAMES = {
   MAR: "Marzo",
 }
 
-interface Month {
-  name: keyof typeof MONTH_NAMES & string
-  numDays: number
+export interface TimeBlock {
+  start: Date
+  end: Date
 }

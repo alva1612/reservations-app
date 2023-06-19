@@ -1,7 +1,8 @@
 <script>
   import Week from "@calendar/components/Week.svelte"
+  import WeekLayout from "@calendar/layouts/WeekLayout.svelte"
 </script>
 
 <div>
-  <Week />
+  <WeekLayout />
 </div>
