@@ -1,24 +1,17 @@
 <script>
-  import { WEEK_DAYS_LOCAL } from "../modules/calendar/types/calendar.type"
+  import { getStartOfWeek } from "@calendar/utils"
+  import { weekDaysArr } from "@calendar/types/calendar.type"
+
   const today = new Date()
-  const todayWeekDay = today.getDay()
-  const currentDayOfMonth = today.getDate()
-  const toNumber = today.valueOf()
-  const arrayDays = Object.values(WEEK_DAYS_LOCAL)
-  $: sunday = new Date(toNumber + 1000 * 60 * 60 * 24 * 2)
+  const startOfWeek = getStartOfWeek(today)
 </script>
 
 <div class="weekCalendarComponent">
-  <p>{today}</p>
-  <p>{today.getDay()}</p>
-  <p>{sunday}</p>
-  <p>{sunday.getDay()}</p>
-  <p>{currentDayOfMonth}</p>
   <div class="weekCalendar_head">
-    {#each arrayDays as DAY, i (i)}
-      <div class="weekCalendar_head_day" class:isToday={i === todayWeekDay - 1}>
-        <span>{DAY.substring(0, 3)}</span>
-        <h2>{currentDayOfMonth - Math.abs(todayWeekDay - i - 1)}</h2>
+    {#each weekDaysArr as day, i (i)}
+      <div class="weekCalendar_head_day" class:isToday={i === today.getDay()}>
+        <span class="dayNumber">{day.substring(0, 3)}</span>
+        <h2>{startOfWeek.getDate() + i}</h2>
       </div>
     {/each}
   </div>
@@ -38,5 +31,9 @@
   }
   .isToday {
     background-color: red;
+  }
+
+  * {
+    color: var(--text-color);
   }
 </style>
