@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { DAY_MS } from "@lib/constants/time.constant"
   import { getStartOfWeek } from "@calendar/utils"
   import { weekDaysArr, type TimeBlock } from "@calendar/types/calendar.type"
   import Day from "./Day.svelte"
@@ -7,7 +6,6 @@
   export let day: Date = new Date()
   export let timeIntervals: TimeBlock[]
   const startOfWeek = getStartOfWeek(day)
-  const startInMs = day.valueOf()
 </script>
 
 <div class="weekCalendarComponent">
@@ -17,7 +15,7 @@
       <span class="dayNumber" class:isday={i === day.getDay()}
         >{startOfWeek.getDate() + i}</span
       >
-      <Day day={new Date(startInMs + i * DAY_MS)} {timeIntervals} />
+      <Day {timeIntervals} />
     </div>
   {/each}
 </div>

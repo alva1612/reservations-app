@@ -7,7 +7,7 @@
 
 <div class="timeRuler">
   {#each timeIntervals as timeBlock}
-    <span>
+    <span class="timeLabel">
       {dateToFormat(timeBlock.start)}
     </span>
   {/each}
@@ -17,5 +17,8 @@
   .timeRuler {
     display: flex;
     flex-direction: column;
+  }
+  .timeLabel {
+    color: white;
   }
 </style>

@@ -1,12 +1,10 @@
 <script lang="ts">
   import type { TimeBlock } from "@calendar/types/calendar.type"
-  import { dateToFormat } from "@lib/utils/DateFormat"
 
   export let timeBlock: TimeBlock
 </script>
 
 <div class="timeBlock">
-  <div class="timeLabel" />
   <div class="eventBlock" />
 </div>
 
