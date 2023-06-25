@@ -1,6 +1,7 @@
 :root {
   --bg-color: rgba(10, 10, 10, 0.9);
   --text-color: #dcdcd4;
+  --scrollbar-color: rgba(255, 255, 255, 0.3);
 
   font-size: 16px;
 }

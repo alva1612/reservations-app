@@ -17,8 +17,11 @@
   .timeRuler {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
   }
   .timeLabel {
+    padding: 2px 4px;
     color: white;
   }
 </style>

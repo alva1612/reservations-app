@@ -1,12 +1,15 @@
 <script lang="ts">
   import type { TimeBlock } from "@calendar/types/calendar.type"
-  import TimeFrame from "./TimeBlock.svelte"
+  import TimeInterval from "./TimeInterval.svelte"
 
   export let timeIntervals: TimeBlock[]
 </script>
 
 <div class="DayCalendar">
-  {#each timeIntervals as timeBlock}
-    <TimeFrame {timeBlock} />
+  {#each timeIntervals as timeInterval}
+    <TimeInterval {timeInterval} />
   {/each}
 </div>
+
+<style>
+</style>

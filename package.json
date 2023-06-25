@@ -25,6 +25,7 @@
     "vitest": "^0.32.2"
   },
   "dependencies": {
+    "@alva1612/clss": "^1.0.2",
     "firebase": "^9.22.2"
   }
 }

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { TimeBlock } from "@calendar/types/calendar.type"
 
-  export let timeBlock: TimeBlock
+  export let timeInterval: TimeBlock
 </script>
 
 <div class="timeBlock">
@@ -11,9 +11,7 @@
 <style>
   .timeBlock {
     display: flex;
-  }
-  .timeLabel {
-    padding: 2px 4px;
+    margin: 0;
   }
   .eventBlock {
     border: 1px solid;
