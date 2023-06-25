@@ -49,32 +49,32 @@
   <button on:click={handleSetInterval}>Change</button>
 </div>
 <div class="weekLayout">
-  <div class="weekLayout_ruler">
-    <TimeRuler {timeIntervals} />
-  </div>
   <div class="weekLayout_header">
     <WeekHeader {day} />
   </div>
   <div class="weekLayout_grid">
+    <TimeRuler {timeIntervals} />
     <Week {timeIntervals} />
   </div>
 </div>
 
 <style>
   .weekLayout {
-    display: grid;
-    grid-template-rows: minmax(min-content, max-content) 1fr;
-    grid-template-columns: 50px 1fr;
+    display: flex;
+    flex-direction: column;
     max-width: calc(70vw);
   }
-  .weekLayout_header {
-    grid-column: 2;
-  }
-  .weekLayout_ruler {
-    grid-row: 2;
-  }
   .weekLayout_grid {
-    grid-row: 2;
-    grid-column: 2;
+    display: flex;
+    max-height: calc(100vh - 200px);
+    overflow-y: overlay;
+  }
+  .weekLayout_grid::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .weekLayout_grid::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border-radius: 10px;
   }
 </style>

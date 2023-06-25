@@ -16,22 +16,12 @@
 <style>
   .weekCalendarComponent {
     display: flex;
-    max-height: calc(100vh - 200px);
-    overflow-y: overlay;
-    position: relative;
-  }
-  .weekCalendarComponent::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  .weekCalendarComponent::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-color);
-    border-radius: 10px;
+    width: 100%;
+    flex-grow: 1;
   }
 
   .weekCalendar_day {
     width: 100%;
-    max-width: 120px;
     display: flex;
     flex-direction: column;
   }
