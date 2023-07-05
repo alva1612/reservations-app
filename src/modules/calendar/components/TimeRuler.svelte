@@ -21,7 +21,8 @@
     height: 100%;
   }
   .timeLabel {
-    padding: 2px 4px;
+    min-height: 30px;
+    padding: 0px 4px;
     color: white;
   }
 </style>

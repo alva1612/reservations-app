@@ -5,15 +5,16 @@
 </script>
 
 <div class="timeBlock">
-  <div class="eventBlock" />
+  <div class="timeBlock_content" />
 </div>
 
 <style>
   .timeBlock {
     display: flex;
     margin: 0;
+    cursor: pointer;
   }
-  .eventBlock {
+  .timeBlock_content {
     border: 1px solid;
     flex-grow: 1;
     min-height: 30px;
