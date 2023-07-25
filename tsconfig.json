@@ -14,15 +14,24 @@
     "allowJs": true,
     "checkJs": true,
     "isolatedModules": true,
-    "plugins": [{
-      "name":"typescript-svelte-plugin"
-    }],
+    "plugins": [
+      {
+        "name": "typescript-svelte-plugin"
+      }
+    ],
     "baseUrl": ".",
     "paths": {
       "@lib/*": ["src/lib/*"],
-      "@calendar/*": ["src/modules/calendar/*"]
+      "@calendar/*": ["src/modules/calendar/*"],
+      "@reservation/*": ["src/modules/reservation/*"]
     }
   },
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "test/**/*.ts"],
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.svelte",
+    "test/**/*.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

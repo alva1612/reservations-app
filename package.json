@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@alva1612/clss": "^1.0.2",
-    "firebase": "^9.22.2"
+    "firebase": "^9.22.2",
+    "svelte-modals": "^1.3.0"
   }
 }
