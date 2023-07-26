@@ -3,6 +3,7 @@
   import Day from "./Day.svelte"
 
   export let timeIntervals: TimeBlock[]
+  $: console.log("timeINtervals", timeIntervals)
 </script>
 
 <div class="weekCalendarComponent">
