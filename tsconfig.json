@@ -23,7 +23,8 @@
     "paths": {
       "@lib/*": ["src/lib/*"],
       "@calendar/*": ["src/modules/calendar/*"],
-      "@reservation/*": ["src/modules/reservation/*"]
+      "@reservation/*": ["src/modules/reservation/*"],
+      "@devTools/*": ["src/modules/devTools/*"]
     }
   },
   "include": [

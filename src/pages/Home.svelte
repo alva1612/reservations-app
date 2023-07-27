@@ -1,10 +1,12 @@
-<script>
-  import WeekLayout from "@calendar/layouts/WeekLayout.svelte"
-  import { intervalUnit } from "@calendar/context/CalendarStores"
+<script lang="ts">
+  import DayLayout from "@calendar/layouts/DayLayout.svelte"
+  import IntervalModifier from "@devTools/components/IntervalModifier.svelte"
 </script>
 
 <div>
-  <WeekLayout />
+  <!-- <WeekLayout /> -->
+  <IntervalModifier />
+  <DayLayout />
 </div>
 
 <style>

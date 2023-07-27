@@ -1,55 +1,19 @@
 <script lang="ts">
   import TimeRuler from "@calendar/components/TimeRuler.svelte"
   import Week from "@calendar/components/Week.svelte"
-  import {
-    amountOfIntervals,
-    intervalUnit,
-    startOfWeek,
-  } from "@calendar/context/CalendarStores"
-  import { weekDaysArr, type TimeBlock } from "@calendar/types/calendar.type"
+  import { startOfWeek } from "@calendar/context/CalendarStores"
+  import { weekDaysArr } from "@calendar/types/calendar.type"
   import { getStartOfWeek } from "@calendar/utils"
-  import { DAY_MS, HOUR_MS } from "@lib/constants/time.constant"
-  import WeekHeader from "./WeekHeader.svelte"
+  import TimeInterval from "@calendar/components/TimeInterval.svelte"
+  import { timeIntervals } from "@calendar/context/CalendarStores"
 
   export let day: Date = new Date()
-  export let timeUnitMs: number = HOUR_MS
 
   $startOfWeek = getStartOfWeek(day)
-
-  const startOfDay = day.setHours(0, 0, 0, 0)
-  const startOfDayMs = startOfDay.valueOf()
-
-  let timeIntervals: TimeBlock[]
-
-  $: $amountOfIntervals = Math.ceil(DAY_MS / timeUnitMs)
-  $: {
-    timeIntervals = Array.from({ length: $amountOfIntervals }, (_, i) => {
-      return {
-        start: new Date(startOfDayMs + i * timeUnitMs),
-        end: new Date(startOfDayMs + (i + 1) * timeUnitMs),
-      }
-    })
-  }
-
-  function handleSetInterval() {
-    if (potentialTimeUnit < HOUR_MS / 4) {
-      alert("muy bajo")
-      return
-    }
-    timeUnitMs = potentialTimeUnit
-    $intervalUnit = timeUnitMs
-  }
-
-  let potentialTimeUnit: number = HOUR_MS
 </script>
 
-<div>
-  <p>Set your interval</p>
-  <input bind:value={potentialTimeUnit} type="number" />
-  <button on:click={handleSetInterval}>Change</button>
-</div>
 <div class="weekLayout">
-  <TimeRuler {timeIntervals} />
+  <TimeRuler />
   <div class="weekLayout_panel">
     <div class="weekLayout_header">
       <!-- <WeekHeader {day} /> -->
@@ -63,7 +27,7 @@
               </span>
             </div>
             <div class="weekPanel_column">
-              {#each timeIntervals as timeInterval}
+              {#each $timeIntervals as timeInterval}
                 <TimeInterval {timeInterval} />
               {/each}
             </div>
@@ -72,7 +36,7 @@
       {/each}
     </div>
     <div class="weekLayout_grid">
-      <Week {timeIntervals} />
+      <Week />
     </div>
   </div>
 </div>

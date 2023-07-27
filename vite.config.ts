@@ -11,6 +11,7 @@ export default defineConfig({
       "@lib": resolve(__dirname, "./src/lib"),
       "@calendar": resolve(__dirname, "./src/modules/calendar"),
       "@reservation": resolve(__dirname, "./src/modules/reservation"),
+      "@devTools": resolve(__dirname, "./src/modules/devTools"),
     },
   },
 })

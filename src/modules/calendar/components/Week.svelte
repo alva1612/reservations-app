@@ -1,15 +1,15 @@
 <script lang="ts">
   import { weekDaysArr, type TimeBlock } from "@calendar/types/calendar.type"
   import Day from "./Day.svelte"
+  import { timeIntervals } from "@calendar/context/CalendarStores"
 
-  export let timeIntervals: TimeBlock[]
-  $: console.log("timeINtervals", timeIntervals)
+  $: console.log("timeINtervals", $timeIntervals)
 </script>
 
 <div class="weekCalendarComponent">
   {#each weekDaysArr as weekDayText, i (i)}
     <div class="weekCalendar_day">
-      <Day {timeIntervals} />
+      <Day />
     </div>
   {/each}
 </div>

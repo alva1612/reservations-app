@@ -1,5 +1,8 @@
 :root {
+  /** COLOR **/
   --bg-color: rgba(10, 10, 10, 0.9);
+  --bg-focus-color: rgba(25, 25, 25, 0.95);
+
   --text-color: #dcdcd4;
   --scrollbar-color: rgba(255, 255, 255, 0.3);
 
