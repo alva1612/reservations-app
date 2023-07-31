@@ -22,5 +22,10 @@
     min-height: 30px;
     padding: 0px 4px;
     color: white;
+    border-top: 1px solid;
+    border-right: 1px solid;
+  }
+  .timeLabel:last-child {
+    border-bottom: 1px solid;
   }
 </style>

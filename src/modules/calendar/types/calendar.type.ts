@@ -30,6 +30,10 @@ const MONTH_NAMES = {
   MAR: "Marzo",
 }
 
+// export interface TimeBlock {
+//   start: Date
+//   end: Date
+// }
 export interface TimeBlock {
   start: Date
   end: Date
