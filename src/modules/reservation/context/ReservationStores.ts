@@ -11,3 +11,6 @@ import { writable } from "svelte/store"
 export const newReservation = writable<Reservation>(
   new Reservation({ timeBlock: new TimeBlock(new Date(), new Date()) })
 )
+
+// let value: string | null
+// const result = value !== null ? value : "default"
